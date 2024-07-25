@@ -34,7 +34,6 @@ void insertAtHead(Node* &head, int d) {
     temp -> next = head;
     head = temp;
 }
-
 void insertAtTail(Node* &tail, int d) {
      // new node create
     Node* temp = new Node(d);
@@ -48,18 +47,16 @@ void print(Node* &head) {
         cout << "List is empty "<< endl;
         return ;
     }
-    Node* temp = head;
+    Node* temp = head;//temp pointer declared at head
 
     while(temp != NULL ) {
-        cout << temp -> data << " ";
-        temp = temp -> next;
+        cout << temp -> data << " ";//print karate jao 
+        temp = temp -> next;//pointer ko aage badhate jaao 
     }
     cout << endl;
 }
 
 void insertAtPosition(Node* &tail, Node* & head, int position, int d) {
-
-
     //insert at Start
     if(position == 1) {
         insertAtHead(head, d);
@@ -68,7 +65,7 @@ void insertAtPosition(Node* &tail, Node* & head, int position, int d) {
 
     Node* temp  = head;
     int cnt = 1;
-
+//
     while(cnt < position-1) {
         temp = temp->next;
         cnt++;
@@ -231,7 +228,7 @@ int main() {
    // cout << node1 -> next << endl;
     
     //head pointed to node1
-    Node* head = node1; 
+    Node* head = node1;//head pointer created to node 1
     Node* tail = node1;
     //print(head);
 
