@@ -7,8 +7,8 @@ int factorial(int n) {
     if(n==0)
         return 1;
 
-    int smallerProblem = factorial(n-1);   
-    int biggerProblem = n * smallerProblem;
+
+    int biggerProblem = n * factorial(n-1);
 
     return biggerProblem;
 }
